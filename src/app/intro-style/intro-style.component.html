@@ -12,19 +12,11 @@
 
     
     <li 
-     *ngFor="let message of messages" 
-     [ngStyle]="{backgroundColor: loopCount > 4? 'red' : 'green'}" >{{ message}} 
+     *ngFor="let message of messages; let i = index;" 
+     [ngStyle]="{backgroundColor: i > 4? 'red' : 'green'}" >{{ message}} 
     </li>
 </ul>
  </div>
- <div>
-    <ul>
-       <li 
-       *ngFor="let m of messages"
-       [ngStyle]="{backgroundColor: loopCount > 4? 'blue' : 'green'}"
-       [ngClass]="{green: loopCount > 4}" > {{ m }}
-       </li>
-      </ul>
- </div>
+ 
 
 
