@@ -1,0 +1,30 @@
+<button 
+    type="text"
+    class = "form-control"
+    (click) = "toggleInput()"> Toggle Color </button>
+
+
+<p 
+   [ngClass] = "{green:toggleFlag===true}" >This is my introtext</p>
+   <div>
+<ul>
+  
+
+    
+    <li 
+     *ngFor="let message of messages" 
+     [ngStyle]="{backgroundColor: loopCount > 4? 'red' : 'green'}" >{{ message}} 
+    </li>
+</ul>
+ </div>
+ <div>
+    <ul>
+       <li 
+       *ngFor="let m of messages"
+       [ngStyle]="{backgroundColor: loopCount > 4? 'blue' : 'green'}"
+       [ngClass]="{green: loopCount > 4}" > {{ m }}
+       </li>
+      </ul>
+ </div>
+
+
